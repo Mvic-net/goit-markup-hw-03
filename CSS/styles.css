@@ -216,6 +216,9 @@ span{
     flex-direction: row;
     justify-content:space-between;
 }
+.employee{
+    margin-bottom: 30px;
+}
 
 /*footer start*/
 .footer {
