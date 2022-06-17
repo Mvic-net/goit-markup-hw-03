@@ -12,6 +12,7 @@
 /*bg-colors*/
 
 /*others*/
+
 }
 
 body{
@@ -23,11 +24,31 @@ body{
 /* common styles start */
 .list{
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .link{
     text-decoration: none;
 }
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/*section start*/
+.section {  
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 /*header start*/
+.main-nav,
+.site-nav{
+    display: flex;
+    align-items: center;
+}
 .header .link.logo,
 .footer .link.logo{
     font-family: 'Raleway';
@@ -38,6 +59,9 @@ body{
     letter-spacing: 0.03em;
     color: var(--accent-color);
 }
+.header .link.logo{
+    margin-right: 93px;
+}
 .header .link{
     font-style: normal;
     font-weight: 500;
@@ -45,7 +69,12 @@ body{
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
+
 .site-link .link{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--dark-color);
 }
 .contact-link .link{
@@ -62,34 +91,50 @@ span{
 .site-link .current {
     color: var(--accent-color);
 }
+.site-link{
+    display: flex;
+}
+.site-link>.item:not(:last-child),
+.contact-flex>.item:not(:last-child){
+    margin-right: 50px;
+}
+.contact-flex{
+    display: flex;
+    margin-left: auto;
+}
 /*header end*/
 
 /*hero start*/
 .hero{
     background-color: var(--hero-footer-color);
+    text-align: center;
 }
 .hero-title{
+    margin-top: 0;
+    margin-bottom: 30px;
     font-style: normal;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--light-color);
 }
 .hero-btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
     font-size: var(--main-font);
     font-weight: 700;
     line-height: 1.88;
-    display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
     background-color: var(--accent-color);
     color: var(--light-color);
     border-radius: 4px;
-    border: 0;
+    border: 0; 
 }
 .hero-btn:hover,
 .hero-btn:focus{
@@ -98,6 +143,7 @@ span{
 /*hero end*/
 /*section start*/
 .section-title{
+    margin-top: 0;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -107,6 +153,8 @@ span{
     color: var(--dark-color);
 }
 .features-title{
+    margin-top: 0px;
+    margin-bottom: 10px;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -116,6 +164,8 @@ span{
     color: var(--dark-color);
 }
 .about-features{
+    margin-top: 0px;
+    margin-bottom: 0px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -125,14 +175,24 @@ span{
 }
 .features-section,
 .pf-title{
+    margin-top: 0px;
+    margin-bottom: 0px;
     display: none;
+
 }
 
+.no-padding{
+    padding-top: 0px;
+}
 .command-title{
+    margin-top: 0px;
+    margin-bottom: 10px;
     font-weight: 500;
     color: var(--dark-color);
 }
 .command-role{
+    margin-top: 0px;
+    margin-bottom: 0px;
     font-weight: 400;;
     color: var(--main-color);
 }
@@ -144,10 +204,23 @@ span{
     text-align: center;
     letter-spacing: 0.03em;
 }
-/*section start*/
+.command-item{
+    padding-top: 94px;
+}
+.list.flex.item{
+    padding-top: 50px;
+    padding-bottom: 94px;
+}
+.list.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
 
 /*footer start*/
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: var(--hero-footer-color);
 }
 .footer .link{
@@ -157,6 +230,7 @@ span{
     color: rgba(255, 255, 255, 0.6);
 }
 .adds{
+    margin-bottom: 9px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -167,9 +241,22 @@ span{
 .footer .logo span{
     color: var(--light-color);
 }
+.footer .logo{
+
+    margin-bottom: 20px;
+    display: block;
+}
+.footer-contact:not(:last-child){
+margin-bottom: 9px;
+}
+
 
 /*footer end*/
 .portfolio-btn{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    padding-right: 22px;
     font-family: var(--main-font);
     font-weight: 500;
     font-size: 16px;
@@ -182,7 +269,12 @@ span{
     border-radius: 4px;
     border: 0;
 }
-
+.pf-item{
+    margin-bottom: 50px;
+}
+.pf-item:not(:last-child){
+    margin-right: 8px;
+}
 .portfolio-btn:hover,
 .btn:focus{
     background-color: var(--accent-color);
@@ -191,7 +283,37 @@ span{
     background-color: var(--accent-color);
     color: var(--light-color);
 }
+.pf-container{
+    width: 1200px;
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flex-container{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+.flex-element{
+    width: 370px;
+    margin: 15px;
+}
+.filter-flex{
+    display: flex;
+    justify-content: center;
+}
+.img-example{
+    margin-bottom: 20px;  
+}
+
+
 .example-title{
+    margin-top: 0px;
+    margin-bottom: 4px;
+    margin-left: 24px;
+    margin-right: 24px;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -201,6 +323,10 @@ span{
 
 }
 .about-example{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 24px;
+    margin-right: 24px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
