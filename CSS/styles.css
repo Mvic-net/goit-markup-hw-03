@@ -302,6 +302,8 @@ margin-bottom: 9px;
 .flex-element{
     width: 370px;
     margin: 15px;
+    border: 1px solid #EEEEEE;
+    
 }
 .filter-flex{
     display: flex;
