@@ -302,9 +302,11 @@ margin-bottom: 9px;
 .flex-element{
     width: 370px;
     margin: 15px;
+    box-sizing: border-box;
     border: 1px solid #EEEEEE;
-    
+    border-top: 0px;
 }
+
 .filter-flex{
     display: flex;
     justify-content: center;
