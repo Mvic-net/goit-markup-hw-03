@@ -185,7 +185,6 @@ span{
 
 .list.features>.item{
     width: 270px;
-    background-color: tomato;
 }
 
 .list.features>.item:not(:last-child) {
