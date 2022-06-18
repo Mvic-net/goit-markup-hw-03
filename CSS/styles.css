@@ -229,9 +229,6 @@ span{
     flex-direction: row;
     justify-content:space-between;
 }
-.employee{
-    margin-bottom: 30px;
-}
 
 /*footer start*/
 .footer {
@@ -319,24 +316,20 @@ margin-bottom: 9px;
     width: 370px;
     margin: 15px;
     box-sizing: border-box;
-    border: 1px solid #EEEEEE;
-    border-top: 0px;
 }
 
 .filter-flex{
     display: flex;
     justify-content: center;
 }
-.img-example{
-    margin-bottom: 20px;  
-    margin-left: -1px;
-    margin-right: -1px;
-}
+
 .example-descripion{
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
+    border: 1px solid #EEEEEE;
+    border-top: 0px;
 }
 
 .example-title{
