@@ -12,7 +12,8 @@
 /*bg-colors*/
 
 /*others*/
-
+--items: 3;
+--indent: 30px;
 }
 
 body{
@@ -104,6 +105,23 @@ span{
 }
 /*header end*/
 
+/* START 
+Сетка на Flex-box*/
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--indent) / 2);
+}
+
+.flex-element {
+    flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+    margin: calc(var(--indent) / 2);
+    box-sizing: border-box;
+}
+
+/* Сетка на Flex-box
+    END              */
+
 /*hero start*/
 .hero{
     background-color: var(--hero-footer-color);
@@ -183,13 +201,6 @@ span{
     display: none;
 }
 
-.list.features>.item{
-    width: 270px;
-}
-
-.list.features>.item:not(:last-child) {
-    margin-right: 30px;
-}
 .no-padding{
     padding-top: 0px;
 }
@@ -220,14 +231,15 @@ span{
 .command-item{
     padding-top: 94px;
 }
+
+.list.command,
+.list.features {
+    --items: 4;
+}
+
 .list.flex.item{
     padding-top: 50px;
     padding-bottom: 94px;
-}
-.list.flex{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
 }
 
 /*footer start*/
@@ -306,17 +318,7 @@ margin-bottom: 9px;
     margin-left: auto;
     margin-right: auto;
 }
-.flex-container{
-    width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-}
-.flex-element{
-    width: 370px;
-    margin: 15px;
-    box-sizing: border-box;
-}
+
 
 .filter-flex{
     display: flex;
